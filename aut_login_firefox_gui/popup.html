@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تنظیمات AUT Ultimate Login</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="title-row">
+        <img src="icon.png" alt="AUT Logo" class="logo" />
+        <div>
+          <h1>AUT Ultimate Login</h1>
+          <p class="subtitle">ورود خودکار به سامانه‌های دانشگاه امیرکبیر</p>
+        </div>
+      </div>
+      <div id="statusBadge" class="badge badge-empty">وضعیت: اطلاعات ورود ثبت نشده است</div>
+    </header>
+
+    <form id="credentialsForm" class="form" novalidate>
+      <div class="field-group">
+        <label for="usernameInput">نام کاربری (شماره دانشجویی / ایمیل)</label>
+        <input
+          type="text"
+          id="usernameInput"
+          dir="ltr"
+          placeholder="مثلاً 40123456"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="field-group">
+        <label for="passwordInput">رمز عبور</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="passwordInput"
+            dir="ltr"
+            placeholder="••••••••"
+            autocomplete="off"
+          />
+          <button type="button" id="togglePasswordBtn" class="toggle-btn" title="نمایش یا مخفی کردن رمز">
+            نمایش
+          </button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="saveBtn" class="btn btn-primary">ذخیره اطلاعات</button>
+        <button type="button" id="clearBtn" class="btn btn-danger">حذف</button>
+      </div>
+
+      <p id="feedbackMsg" class="feedback" aria-live="polite"></p>
+    </form>
+
+    <footer class="footer">
+      اطلاعات ورود فقط به صورت محلی روی مرورگر شما ذخیره می‌شود.
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
